@@ -34,14 +34,9 @@
     <div
       v-if="car"
       class="flex flex-col px-6 pt-36 min-h-screen space-y-16 space-x-0 md:flex-row md:items-center md:space-y-0 md:space-x-16 md:pt-0 md:px-6"
-     
     >
       <transition name="fade-left" appear="true">
-        <img
-          :src="car.image"
-          :alt="car.title"
-          class="h-48 md:h-56 lg:h-96"
-        />
+        <img :src="car.image" :alt="car.title" class="h-48 md:h-56 lg:h-96" />
       </transition>
 
       <transition name="fade-right" appear="true">
@@ -110,13 +105,13 @@
             <h4 class="text-lg">{{ car.seating_capacity }} seats</h4>
           </div>
           <div
-            class="flex justify-between items-center border-b-2 border-gray pb-2"
+            class="flex justify-between flex-wrap items-center border-b-2 border-gray pb-2"
           >
-            <h3 class="font-serif text-black capitalize text-xl font-bold">
+            <h3 class="font-serif text-black capitalize text-xl font-bold ">
               features :
             </h3>
             <h4
-              class="text-lg"
+              class="text-md md:text-lg "
               v-for="(features, index) in car.features"
               :key="index"
             >
@@ -255,6 +250,5 @@ export default {
     opacity: 0;
     transform: translateY(40px);
   }
-  
 }
 </style>
